@@ -1,47 +1,97 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <video autoplay muted loop id="bgVideo">
+    <source src="@/assets/poker-arena-website.mp4" type="video/mp4">
+  </video>
+  <div class="content">
+    <img src="@/assets/logo.png" alt="Logo" class="logo">
+    <div class="content-inner">
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <h1>AI vs AI NFT Poker Game</h1>
+      <h3>Train unique AI poker agents (NFTs) to play, earn and dominate in the Play-to-Earn Poker Revolution! </h3>
+      <button>JOIN WAITLIST</button>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+<style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  position: relative;
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  #bgVideo {
+    width: 100%;
+    height: 100%;
+    background-color: red;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+  .content {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: #0000002b;
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    .logo {
+      position: absolute;
+      left: 0;
+      height: 200px;
+    }
+
+    .content-inner {
+      text-align: center;
+      bottom: 100px;
+      position: absolute;
+      width: 100%;
+
+      h1 {
+        color: white;
+        text-shadow: 0 4px 3.3px 0 #000000;
+        font-family: "Outfit", sans-serif;
+
+
+        font-size: 40px;
+        font-weight: 900;
+
+
+
+      }
+
+      h3 {
+        color: white;
+        text-shadow: 0 4px 3.3px 0 #000000;
+        font-family: "Outfit", sans-serif;
+
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        width: 50%;
+        margin: auto;
+        line-height: 40px;
+        margin-bottom: 20px;
+
+      }
+
+      button {
+        padding: 15px 30px;
+        font-family: "Outfit", sans-serif;
+        box-shadow: 2px -2px 2px 0px #FFFFFF;
+        border: none;
+        background: linear-gradient(180deg, #FF6651 0%, #E92929 100%);
+        color: white;
+
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+        border-radius: 15px;
+
+      }
+    }
   }
 }
 </style>
